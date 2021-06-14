@@ -6,12 +6,11 @@
 		<meta charset="UTF-8">
 		<meta name="viewport"
 		      content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta http-equiv="X-UA-Compatible"
-		      content="IE=edge">
-		<link rel="stylesheet"
-		      href="css/main.css">
-		<script src="js/main.js"
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="stylesheet" href="css/main.css">
+		<script src="https://www.google.com/recaptcha/api.js" async
 		        defer></script>
+		<script src="js/main.js" defer></script>
 		<title>reCAPTCHA</title>
 	</head>
 
@@ -22,8 +21,55 @@
 			</h1>
 		</header>
 		<main>
+			<h2>
+				Envie seu recado
+			</h2>
+			<form action="#" method="post">
+				<label for="name">Nome</label>
+				<div class="input-field name before">
+					<input type="text" id="name" placeholder="Nome"
+					       autocomplete="off">
+				</div>
+				<label for="email">E-mail</label>
+				<div class="input-field email before">
+					<input type="email" id="email" placeholder="E-mail"
+					       autocomplete="off">
+				</div>
+				<label for="message">Mensagem</label>
+				<div class="input-field message before">
+					<textarea name="message" id="message" rows="4"
+					          placeholder="Mensagem"
+					          autocomplete="off"></textarea>
+				</div>
+				<div class="terms">
+					<input type="checkbox" id="terms">
+					<p>
+						<label for="terms">Aceito os termos de uso deste
+						                   formulário.</label>
+						<a href="#">Saiba mais</a>
+					</p>
+					<p class="terms-details">
+						Solicitamos nome e e-mail para entrarmos em contato com
+						você. Mas fique tranquilo, não armazenamos e não
+						disponibilizamos seus dados para terceiros.
+						<small>
+							<a href="#">Fechar</a>
+						</small>
+					</p>
+				</div>
+				<div class="g-recaptcha" id="reCaptcha"
+				     data-callback="callBack"
+				     data-sitekey="6LdOoeEaAAAAAIped7HDiMoeCZCRssrTHS_n1_JA"></div>
+				<input type="submit" id="submit" value="Enviar">
+			</form>
+			<div class="result">
+				<p class="result-paragraph">
+				</p>
+				<p>
+					<a href="#">Ok</a>
+				</p>
+			</div>
 		</main>
-		<footer></footer>
 	</body>
 
 </html>
